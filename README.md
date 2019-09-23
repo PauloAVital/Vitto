@@ -1,4 +1,4 @@
-<p align="center"><img width="50" src="https://sistemavitto.com.br/_assets/img/app-maisusado.png"></p>
+<p align="center"><img width="80" src="https://sistemavitto.com.br/_assets/img/app-maisusado.png"></p>
 
 ## Teste Vitto
 
