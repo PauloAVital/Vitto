@@ -10,8 +10,8 @@ class Router
 
     public function __construct()
     {
-        echo '<pre>';
-        echo 'Roteador iniciando'.PHP_EOL;
+      #  echo '<pre>';
+      #  echo 'Roteador iniciando'.PHP_EOL;
     }
 
     public function autoload()
@@ -39,7 +39,7 @@ class Router
             }
 
         } else {
-            echo 'Página não encontrada!';
+            echo 'Página não encontrada';
         }
     }
 

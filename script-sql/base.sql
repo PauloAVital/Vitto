@@ -1,0 +1,1 @@
+CREATE SCHEMA `desafio_vitto_bd` ;

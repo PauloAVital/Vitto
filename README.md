@@ -21,3 +21,6 @@ php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
 ##Após ser realizada a instalação do requisitos e ter instalado o composer entre no diretorio:
 public e utilize o servidor interno do php com o seguinte comando
 php -S localhost:8787
+
+## Ambiente de Dados
+> Verifique no php.ini se as extensões do pdo estão ativas.
