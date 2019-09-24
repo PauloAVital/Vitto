@@ -1,12 +1,15 @@
 {
   "name": "Projeto de Teste Vitto",
+  "license": "MIT",
   "require": {
-    "php": ">=7.2"
+    "php": ">=7.2",
+    "monolog/monolog": "1.0.*"
   },
   "authors": [
     {
       "name": "Paulo A. Vital",
-      "email": "pauloavital@gmail.com"
+      "email": "pauloavital@gmail.com",
+      "role": "Developer"
     }
   ],
   "autoload": {
