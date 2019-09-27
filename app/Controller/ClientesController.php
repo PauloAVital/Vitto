@@ -36,12 +36,9 @@ class ClientesController
 
     public function atuCliente()
     {
-        #echo $_GET['id'];
-        #die();
-        #$dados = ['id' => $_GET['id']];
         $dados = $this->funcoes->consulta($this->table, 'where id = '.$_GET['id']);
         $this->model->render($this->view->getLink('cliente\atualiza'));
-        return $dados; //compact('dados');
+        return $dados;
     }
 
     public function salvar()
@@ -51,7 +48,13 @@ class ClientesController
         ($_POST['name'] != null) && (strlen($_POST['name'])>3) ? $this->campos['NAME'] = $_POST['name'] : $erros[] = 'Nome';
         ($_POST['email'] != null)  ? $this->campos['EMAIL'] = $_POST['email'] : $erros[] = 'E-mail';
         ($_POST['senha'] != null)  ? $this->campos['SENHA'] = $_POST['senha'] : $erros[] = 'Senha';
-        ($_POST['saldo'] != null)  ? $this->campos['SALDO'] = str_replace(",", ".", $_POST['saldo']) : $erros[] = 'Saldo';
+        if ($_POST['saldo'] != null) {
+            $saldo =  str_replace(".", "", $_POST['saldo']);
+            $saldo =  str_replace(",", ".", $saldo);
+            $this->campos['SALDO'] = $saldo;
+        } else {
+            $erros[] = 'Saldo';
+        }
 
         if (count($erros) <= 0)
         {

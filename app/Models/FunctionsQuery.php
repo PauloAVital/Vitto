@@ -27,7 +27,8 @@ class FunctionsQuery extends Conn
     public function gravar($table, $campos)
     {
         $result = $this->consulta($table, "where email = '".$campos['EMAIL']."'");
-        if ($result == 0) {
+
+        if (count($result) == 0) {
             $this->insert($table, $campos);
         } else {
             $this->update($table, $campos,$result[0]['id']);
@@ -49,9 +50,12 @@ class FunctionsQuery extends Conn
             foreach($campos as $indice => $valor) {
                 $stmt->bindValue($indice,$valor);
             }
+
             if($stmt->execute() === false){
                 echo "<pre>";
                 print_r($stmt->errorInfo());
+            } else {
+                echo 'Gravado com Sucesso';
             }
         } catch (Exception $e) {
             echo $e->getMessage();
