@@ -1,8 +1,8 @@
-<p align="center"><img width="50" src="https://sistemavitto.com.br/_assets/img/app-maisusado.png"></p>
+<p align="center"><img width="80" src="https://sistemavitto.com.br/_assets/img/app-maisusado.png"></p>
 
 ## Teste Vitto
 
-##REQUISITOS NECESSÁRIOS PARA RODAR O SISTEMA
+## REQUISITOS NECESSÁRIOS PARA RODAR O SISTEMA
 
 > O teste foi realizado em ambiente WINDOWS
 
@@ -18,9 +18,10 @@ php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
 
 >digite o comando: composer install
 
-##Após ser realizada a instalação do requisitos e ter instalado o composer entre no diretorio:
-public e utilize o servidor interno do php com o seguinte comando
+## Após ser realizada a instalação do requisitos e ter instalado o composer
+Entre no diretorio: public e utilize o servidor interno do php com o seguinte comando
 php -S localhost:8787
 
 ## Ambiente de Dados
 > Verifique no php.ini se as extensões do pdo estão ativas.
+
