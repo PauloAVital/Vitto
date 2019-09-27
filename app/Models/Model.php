@@ -4,8 +4,8 @@ namespace Vital\Models;
 
 class Model
 {
-    public function getLink($str = 'index')
+    public function render($str)
     {
-        return include_once "../app/Views/".$str.".php";
+        echo $str;
     }
 }

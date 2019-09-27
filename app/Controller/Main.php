@@ -3,7 +3,7 @@ namespace Vital\Controller;
 
 use Vital\Models\Model;
 use Vital\Views\View;
-use Vital\Models\Conn;
+use Vital\Models\FunctionsQuery;
 
 class Main
 {
@@ -14,13 +14,16 @@ class Main
     {
         $this->model = new Model();
         $this->view = new View();
-        $this->conn = new Conn();
+        $this->conn = new FunctionsQuery();
     }
 
     public function principal()
     {
-        $this->conn;
-        $this->view->render($this->model->getLink('index'));
+        #Apenas para testar o Banco.
+        $ret = $this->conn->consulta('usuario');
+        #print_r($ret[0]['name']);
+        #print_r($ret);
+        $this->model->render($this->view->getLink('index'));
     }
 
 }
