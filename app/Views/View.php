@@ -4,8 +4,13 @@ namespace Vital\Views;
 
 class View
 {
-    public function render($str)
+    public function getLink($str = 'index')
     {
-        echo $str;
+        return include_once "../app/Views/".$str.".php";
+    }
+
+    public function redirect($str = '')
+    {
+        return header("Location: /".$str);
     }
 }

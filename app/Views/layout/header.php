@@ -13,16 +13,16 @@
 <header>
     <nav>
         <div class="nav-wrapper deep-orange">
-            <a href="/" class="brand-logo">Teste Vitto</a>
-            <a href="/" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo">Teste Vitto</a>
+            <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="/">Home</a></li>
-                <li><a href="#">Cursos</a></li>
+                <li><a href="/cliente">Cliente</a></li>
             </ul>
         </div>
     </nav>
     <ul class="sidenav deep-orange lighten-3" id="mobile">
         <li><a href="/">Home</a></li>
-        <li><a href="#">Cursos</a></li>
+        <li><a href="/cliente">Cliente</a></li>
     </ul>
 </header>

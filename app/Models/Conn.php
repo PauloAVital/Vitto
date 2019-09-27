@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Vital\Models;
-
 
 class Conn
 {
@@ -17,9 +14,14 @@ class Conn
             try {
                 $this->conn = new \PDO($this->dns,$this->user, $this->pass);
             } catch (PDOException $e) {
-                echo $e->getMessage();
+                echo "Erro: <code> ".$e->getMessage(). "</code>";
             }
         }
+    }
+
+    public function __destruct()
+    {
+        $this->conn = null;
     }
 
 }

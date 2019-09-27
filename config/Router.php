@@ -26,6 +26,13 @@ class Router
 
         $routes = [
             '/' => ['Vital\\Controller\\Main', 'principal'],
+            '/cliente' => ['Vital\\Controller\\ClientesController', 'getCadastro'],
+            '/salvarCliente' => ['Vital\\Controller\\ClientesController', 'salvar'],
+            '/listarCliente' => ['Vital\\Controller\\ClientesController', 'listar'],
+            '/atualizarCliente' => ['Vital\\Controller\\ClientesController', 'atuCliente'],
+            '/atualizaCliente' => ['Vital\\Controller\\ClientesController', 'atualizar'],
+            '/apagaCliente' => ['Vital\\Controller\\ClientesController', 'apagarCliente'],
+
         ];
 
 
